@@ -1,0 +1,30 @@
+
+.clear {
+    clear: both;
+}
+
+#rombs {
+    width: 600px;
+}
+
+    .line.odd {
+        margin-left: 50px;
+    }
+    
+    .line {
+    }
+
+    #rombs .romb {
+        width: 64px;
+        height: 64px;
+        background-color: black;
+        float: left;
+        margin: 17px 17px -31px 19px;
+        z-index: 10;
+        position: relative;
+    }
+
+        #rombs .romb:hover {
+            background-color: red;
+            -webkit-transition: background 0.5s ease;
+        }
