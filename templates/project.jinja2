@@ -1,0 +1,50 @@
+{% include "header.jinja2" %}
+
+    <div class="top_bar">
+
+	    <a name="top"></a>
+
+        <div class="home_link_container">
+            &larr; <a href="/">Home</a>
+        </div>
+
+	    {% set social_class = 'small_social_buttons_container' %}
+	    {% include "misc/social_buttons.jinja2" %}
+
+        <div class="name">
+            Alex Shteinikov
+        </div>
+
+    </div>
+
+    <div id="main_container">
+
+	    <div class="project_name">
+		    Project: <span>{{ project.name }}</span>
+	    </div>
+
+	    {% if project.link %}
+	        <a href="{{ project.link }}">{{ project.link }}</a>
+	    {% endif %}
+
+	    {% include "projects/"+__page__+".jinja2" %}
+
+    </div>
+
+	<div class="bottom_bar">
+
+		<div class="home_link_container">
+			&larr; <a href="/">Home</a>
+		</div>
+
+		<div class="home_link_container">
+			&uarr; <a href="#top">Top</a>
+		</div>
+
+		{% include "misc/social_buttons.jinja2" %}
+
+		<div class="clear"></div>
+	</div>
+
+
+{% include "footer.jinja2" %}

@@ -1,0 +1,592 @@
+[01/Feb/2013:15:27:08] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:27:08] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:27:08] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:27:08] ENGINE Bus STARTING
+[01/Feb/2013:15:27:08] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:27:08] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/servers.py", line 187, in _start_http_thread
+    self.httpserver.start()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/wsgiserver/wsgiserver2.py", line 1824, in start
+    raise socket.error(msg)
+error: No socket could be created
+
+[01/Feb/2013:15:27:08] ENGINE Bus STOPPING
+[01/Feb/2013:15:27:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('192.168.1.6', 8080)) already shut down
+[01/Feb/2013:15:27:08] ENGINE Stopped thread '_TimeoutMonitor'.
+[01/Feb/2013:15:27:08] ENGINE Bus STOPPED
+[01/Feb/2013:15:27:08] ENGINE Bus EXITING
+[01/Feb/2013:15:27:08] ENGINE Bus EXITED
+[01/Feb/2013:15:27:39] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:27:39] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:27:39] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:27:39] ENGINE Bus STARTING
+[01/Feb/2013:15:27:39] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:27:44] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x100b90bd0>>
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/wspbus.py", line 197, in publish
+    output.append(listener(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpserver.py", line 151, in start
+    ServerAdapter.start(self)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/servers.py", line 167, in start
+    wait_for_free_port(*self.bind_addr)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/servers.py", line 410, in wait_for_free_port
+    raise IOError("Port %r not free on %r" % (port, host))
+IOError: Port 8080 not free on '127.0.0.1'
+
+[01/Feb/2013:15:27:44] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/wspbus.py", line 235, in start
+    self.publish('start')
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/process/wspbus.py", line 215, in publish
+    raise exc
+ChannelFailures: IOError("Port 8080 not free on '127.0.0.1'",)
+
+[01/Feb/2013:15:27:44] ENGINE Bus STOPPING
+[01/Feb/2013:15:27:44] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) already shut down
+[01/Feb/2013:15:27:44] ENGINE Stopped thread '_TimeoutMonitor'.
+[01/Feb/2013:15:27:44] ENGINE Bus STOPPED
+[01/Feb/2013:15:27:44] ENGINE Bus EXITING
+[01/Feb/2013:15:27:44] ENGINE Bus EXITED
+[01/Feb/2013:15:27:48] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:27:48] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:27:48] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:27:48] ENGINE Bus STARTING
+[01/Feb/2013:15:27:48] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:27:48] ENGINE Serving on 127.0.0.1:8080
+[01/Feb/2013:15:27:48] ENGINE Bus STARTED
+[01/Feb/2013:15:28:16] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:28:16] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:28:16] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:28:16] ENGINE Bus STARTING
+[01/Feb/2013:15:28:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:28:16] ENGINE Serving on 127.0.0.1:8080
+[01/Feb/2013:15:28:16] ENGINE Bus STARTED
+[01/Feb/2013:15:28:30] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:28:30] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:28:30] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:28:30] ENGINE Bus STARTING
+[01/Feb/2013:15:28:30] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:28:30] ENGINE Serving on 127.0.0.1:8080
+[01/Feb/2013:15:28:30] ENGINE Bus STARTED
+[01/Feb/2013:15:28:43] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:28:43] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:28:43] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:28:43] ENGINE Bus STARTING
+[01/Feb/2013:15:28:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:28:44] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:28:44] ENGINE Bus STARTED
+[01/Feb/2013:15:28:45] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 61, in index
+    return self._load(inspect.stack()[0][3],'index', params)
+  File "/Users/ido/github/home/run.py", line 42, in _load
+    for variant in self.page_runners[func_name]:
+KeyError: 'index'
+
+[01/Feb/2013:15:28:45] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:28:45] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:28:45] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:29:38] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:29:38] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:29:38] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:29:38] ENGINE Bus STARTING
+[01/Feb/2013:15:29:38] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:29:38] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:29:38] ENGINE Bus STARTED
+[01/Feb/2013:15:29:39] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 64, in index
+    return self._load(inspect.stack()[0][3],'index', params)
+  File "/Users/ido/github/home/run.py", line 45, in _load
+    for variant in self.page_runners[func_name]:
+KeyError: 'index'
+
+[01/Feb/2013:15:29:39] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:29:39] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:29:39] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:30:14] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:30:14] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:30:14] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:30:14] ENGINE Bus STARTING
+[01/Feb/2013:15:30:14] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:30:14] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:30:14] ENGINE Bus STARTED
+[01/Feb/2013:15:30:31] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:30:31] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:30:31] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:30:31] ENGINE Bus STARTING
+[01/Feb/2013:15:30:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:30:31] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:30:31] ENGINE Bus STARTED
+[01/Feb/2013:15:30:45] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:30:45] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:30:45] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:30:45] ENGINE Bus STARTING
+[01/Feb/2013:15:30:45] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:30:45] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:30:45] ENGINE Bus STARTED
+[01/Feb/2013:15:31:16] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:31:16] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:31:16] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:31:16] ENGINE Bus STARTING
+[01/Feb/2013:15:31:16] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:31:16] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:31:16] ENGINE Bus STARTED
+[01/Feb/2013:15:32:17] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:32:17] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:32:17] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:32:17] ENGINE Bus STARTING
+[01/Feb/2013:15:32:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:32:17] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:32:17] ENGINE Bus STARTED
+[01/Feb/2013:15:32:31] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:32:31] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:32:31] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:32:31] ENGINE Bus STARTING
+[01/Feb/2013:15:32:31] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:32:31] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:32:31] ENGINE Bus STARTED
+[01/Feb/2013:15:33:17] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:33:17] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:33:17] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:33:17] ENGINE Bus STARTING
+[01/Feb/2013:15:33:17] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:33:17] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:33:17] ENGINE Bus STARTED
+[01/Feb/2013:15:33:22] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 62, in index
+    return self._load(inspect.stack()[0][3],'index', params)
+  File "/Users/ido/github/home/run.py", line 46, in _load
+    if self.caching:
+AttributeError: WebApp instance has no attribute 'caching'
+
+[01/Feb/2013:15:33:22] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:33:22] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:33:22] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:33:55] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:33:55] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:33:55] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:33:55] ENGINE Bus STARTING
+[01/Feb/2013:15:33:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:33:56] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:33:56] ENGINE Bus STARTED
+[01/Feb/2013:15:33:57] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 50, in index
+    return self._load(inspect.stack()[0][3],'index', params)
+  File "/Users/ido/github/home/run.py", line 45, in _load
+    return self.controller.controllers[variant['name']].printPage(page, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 21, in wrapper
+    return defaultController.printPage2(self, page, rules, self.methods, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 198, in printPage2
+    self.cur_player = self.sbuilder.playerLogged()
+AttributeError: builder instance has no attribute 'playerLogged'
+
+[01/Feb/2013:15:33:57] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:33:57] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:33:57] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:34:15] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:34:15] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:34:15] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:34:15] ENGINE Bus STARTING
+[01/Feb/2013:15:34:15] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:34:16] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:34:16] ENGINE Bus STARTED
+[01/Feb/2013:15:34:17] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 50, in index
+    return self._load(inspect.stack()[0][3],'index', params)
+  File "/Users/ido/github/home/run.py", line 45, in _load
+    return self.controller.controllers[variant['name']].printPage(page, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 21, in wrapper
+    return defaultController.printPage2(self, page, rules, self.methods, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 220, in printPage2
+    if 'invites' in self.core.debug and self.core.debug['invites']:
+AttributeError: core instance has no attribute 'debug'
+
+[01/Feb/2013:15:34:17] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  CACHE-CONTROL: max-age=0
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:34:17] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:34:17] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:35:03] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:35:03] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:35:03] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:35:03] ENGINE Bus STARTING
+[01/Feb/2013:15:35:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:35:03] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:35:03] ENGINE Bus STARTED
+[01/Feb/2013:15:35:05] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:35:05] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:35:54] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:35:54] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:35:54] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:35:54] ENGINE Bus STARTING
+[01/Feb/2013:15:35:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:35:54] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:35:54] ENGINE Bus STARTED
+[01/Feb/2013:15:35:56] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:35:56] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:36:15] HTTP 
+Request Headers:
+  COOKIE: __utma=96992031.1868116313.1359603984.1359603984.1359603984.1; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: */*
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[01/Feb/2013:15:36:15] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cptools.py", line 168, in handle_func
+    handled = self.callable(*args, **self._merged_args(kwargs))
+TypeError: staticfile() got multiple values for keyword argument 'filename'
+
+[01/Feb/2013:15:36:43] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:36:43] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:36:43] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:36:43] ENGINE Bus STARTING
+[01/Feb/2013:15:36:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:36:43] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:36:43] ENGINE Bus STARTED
+[01/Feb/2013:15:41:42] ENGINE Listening for SIGHUP.
+[01/Feb/2013:15:41:42] ENGINE Listening for SIGTERM.
+[01/Feb/2013:15:41:42] ENGINE Listening for SIGUSR1.
+[01/Feb/2013:15:41:42] ENGINE Bus STARTING
+[01/Feb/2013:15:41:42] ENGINE Started monitor thread '_TimeoutMonitor'.
+[01/Feb/2013:15:41:42] ENGINE Serving on 127.0.0.1:8082
+[01/Feb/2013:15:41:42] ENGINE Bus STARTED
+[07/Feb/2013:07:12:56] ENGINE Caught signal SIGTERM.
+[07/Feb/2013:07:12:56] ENGINE Bus STOPPING
+[07/Feb/2013:07:12:56] ENGINE Caught signal SIGTERM.
+[07/Feb/2013:07:12:56] ENGINE Bus STOPPING
+[07/Feb/2013:07:12:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8082)) already shut down
+[07/Feb/2013:07:12:56] ENGINE Stopped thread '_TimeoutMonitor'.
+[07/Feb/2013:07:12:56] ENGINE Bus STOPPED
+[07/Feb/2013:07:12:56] ENGINE Bus EXITING
+[07/Feb/2013:07:12:56] ENGINE Bus EXITED
+[07/Feb/2013:07:12:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8082)) shut down
+[07/Feb/2013:07:12:56] ENGINE No thread running for None.
+[07/Feb/2013:07:12:56] ENGINE Bus STOPPED
+[07/Feb/2013:07:12:56] ENGINE Bus EXITING
+[07/Feb/2013:07:12:56] ENGINE Bus EXITED
+[07/Feb/2013:07:12:56] ENGINE Waiting for child threads to terminate...
+[11/Feb/2013:09:25:22] ENGINE Listening for SIGHUP.
+[11/Feb/2013:09:25:22] ENGINE Listening for SIGTERM.
+[11/Feb/2013:09:25:22] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:09:25:22] ENGINE Bus STARTING
+[11/Feb/2013:09:25:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:09:25:22] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:09:25:22] ENGINE Bus STARTED
+[11/Feb/2013:09:27:57] ENGINE Listening for SIGHUP.
+[11/Feb/2013:09:27:57] ENGINE Listening for SIGTERM.
+[11/Feb/2013:09:27:57] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:09:27:57] ENGINE Bus STARTING
+[11/Feb/2013:09:27:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:09:27:58] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:09:27:58] ENGINE Bus STARTED
+[11/Feb/2013:09:28:41] ENGINE Listening for SIGHUP.
+[11/Feb/2013:09:28:41] ENGINE Listening for SIGTERM.
+[11/Feb/2013:09:28:41] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:09:28:41] ENGINE Bus STARTING
+[11/Feb/2013:09:28:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:09:28:42] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:09:28:42] ENGINE Bus STARTED
+[11/Feb/2013:09:30:02] ENGINE Listening for SIGHUP.
+[11/Feb/2013:09:30:02] ENGINE Listening for SIGTERM.
+[11/Feb/2013:09:30:02] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:09:30:02] ENGINE Bus STARTING
+[11/Feb/2013:09:30:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:09:30:02] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:09:30:02] ENGINE Bus STARTED
+[11/Feb/2013:09:40:58] HTTP Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cprequest.py", line 656, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/CherryPy-3.2.2-py2.7.egg/cherrypy/_cpdispatch.py", line 34, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/ido/github/home/run.py", line 54, in default
+    return self._load(inspect.stack()[0][3], page, params)
+  File "/Users/ido/github/home/run.py", line 45, in _load
+    return self.controller.controllers[variant['name']].printPage(page, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 21, in wrapper
+    return defaultController.printPage2(self, page, rules, self.methods, params)
+  File "/Users/ido/github/home/controllers/basic.py", line 189, in printPage2
+    return runRule(rules[page_name])
+  File "/Users/ido/github/home/controllers/basic.py", line 158, in runRule
+    return rule(fields, params)
+  File "/Users/ido/github/home/controllers/misc.py", line 37, in printProject
+    project = {'code': fields['__page__']}
+  File "/Users/ido/github/home/controllers/basic.py", line 229, in _printTemplate
+    return self.sbuilder.loadTemplate(self.DIR+tmp+'.jinja2', fields)
+  File "/Users/ido/github/home/system/site_builder.py", line 69, in loadTemplate
+    text = template.render(fields)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/ido/github/home/system/../templates/project.jinja2", line 21, in top-level template code
+    Projects: <span>{{ project.name }}</span>
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 372, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'project' is undefined
+
+[11/Feb/2013:09:40:58] HTTP 
+Request Headers:
+  REFERER: http://127.0.0.1:8082/
+  HOST: 127.0.0.1:8082
+  CONNECTION: keep-alive
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  ACCEPT-CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+  COOKIE: __utma=96992031.1868116313.1359603984.1360064114.1360067623.5; __utmz=96992031.1359603984.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  ACCEPT-ENCODING: gzip,deflate,sdch
+[11/Feb/2013:09:41:20] ENGINE Listening for SIGHUP.
+[11/Feb/2013:09:41:20] ENGINE Listening for SIGTERM.
+[11/Feb/2013:09:41:20] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:09:41:20] ENGINE Bus STARTING
+[11/Feb/2013:09:41:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:09:41:20] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:09:41:20] ENGINE Bus STARTED
+[11/Feb/2013:11:09:11] ENGINE Listening for SIGHUP.
+[11/Feb/2013:11:09:11] ENGINE Listening for SIGTERM.
+[11/Feb/2013:11:09:11] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:11:09:11] ENGINE Bus STARTING
+[11/Feb/2013:11:09:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:11:09:11] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:11:09:11] ENGINE Bus STARTED
+[11/Feb/2013:11:09:30] ENGINE Listening for SIGHUP.
+[11/Feb/2013:11:09:30] ENGINE Listening for SIGTERM.
+[11/Feb/2013:11:09:30] ENGINE Listening for SIGUSR1.
+[11/Feb/2013:11:09:30] ENGINE Bus STARTING
+[11/Feb/2013:11:09:30] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/Feb/2013:11:09:30] ENGINE Serving on 127.0.0.1:8082
+[11/Feb/2013:11:09:30] ENGINE Bus STARTED

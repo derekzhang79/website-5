@@ -1,0 +1,243 @@
+
+{% set portfolio_one = [
+
+	{
+		'name': 'Tweeria',
+		'link': '/tweeria',
+		'img': 'tweeria.jpg',
+		'link_name':'Learn More',
+		'content': '
+				<div class="quote">
+                    <p class="quote_body">
+                        “Every retweet<br>
+                        is a life-or-death struggle”
+                    </p>
+                    <div class="triangle"></div>
+                    <p class="author">Russell Brandom, <a href="link">The Verge</a></p>
+                </div>
+
+                <p class="description">
+                    This is my own startup:<br>
+                    lazy Twitter MMORPG<br>
+                    about monsters, dungeons<br>
+                    people and item crafting
+                </p>'
+    },
+    {
+		'name': 'Document<br>Management System<br>for Government',
+		'link': '/kgs',
+		'img': 'kgs.jpg',
+		'link_name':'Continue',
+		'content': '
+				<p class="description">
+                    In 2011-2012 I worked<br>
+                    on user interface design<br>
+                    for DMS Estate Department<br>
+                    of Russian northern city<br>
+                    Salekhard
+                    <a href="link" class="geo"></a>
+                </p>'
+    },
+    {
+		'name': 'City Portal',
+		'link': '/megatyumen',
+		'img': 'megatyumen.jpg',
+		'link_name':'Details',
+		'content': '
+				 <p class="description">
+                    I worked in a team<br>
+                    to build new version<br>
+                    of city portal<br>
+                    for one of russian city.<br><br>
+
+                    I was responsive for<br>
+                    new look and UX<br>
+                </p>'
+    },
+
+] %}
+
+
+{% include "header.jinja2" %}
+
+    <div id="main_container" class="index">
+
+        <div class="about_me">
+
+            <div class="self_photo_container">
+                <img src="images/me.jpg">
+            </div>
+            <div class="self_photo_overlay_container"></div>
+
+            <div class="description">
+                <h1>Alex Shteinikov</h1>
+                <p>
+                    I’m a web/ui designer with good<br>
+                    programming background
+                </p>
+            </div>
+
+        </div>
+
+        {% set social_class = 'social_buttons_container' %}
+        {% include "misc/social_buttons.jinja2" %}
+
+        <div class="level_one">
+            I’m looking for a job in Brisbane, Australia<br>
+            and there are some of my latest works:
+        </div>
+
+        <div class="portfolio_one">
+	        {% for project in portfolio_one %}
+
+	            <div class="item">
+	                <a href="{{ project.link }}" class="more">
+	                    <div class="portfolio_image">
+	                        <div class="image_container">
+	                            <img src="images/{{ project.img }}">
+	                        </div>
+	                        <div class="image_overlay_container"></div>
+	                    </div>
+	                </a>
+	                <h2>{{ project.name }}</h2>
+
+	                {{ project.content }}
+
+	                <a href="{{ project.link }}" class="more">{{ project.link_name }}</a>
+	            </div>
+
+	        {% endfor %}
+
+
+        </div>
+
+        <div class="level_one">
+            And there are some of my earlier works<br>
+            between 2007 and 2010:
+        </div>
+
+        <div class="portfolio_two">
+            <div class="item">
+                <div class="portfolio_image">
+                    <div class="image_container">
+                        <img src="images/small_medical.jpg">
+                    </div>
+                    <div class="image_overlay_container"></div>
+                </div>
+                <h2>
+                    Medical Center
+                </h2>
+                <p class="description">
+                    Website for famous<br>
+                    local media center
+                </p>
+
+            </div>
+            <div class="item">
+                <div class="portfolio_image">
+                    <div class="image_container">
+                        <img src="images/small_taxi.jpg">
+                    </div>
+                    <div class="image_overlay_container"></div>
+                </div>
+                <h2>
+                    Taxi website
+                </h2>
+                <p class="description">
+                    Strict and gray<br>
+                    for taxi servives
+                </p>
+
+            </div>
+            <div class="item">
+                <div class="portfolio_image">
+                    <div class="image_container">
+                        <img src="images/small_insurance.jpg">
+                    </div>
+                    <div class="image_overlay_container"></div>
+                </div>
+                <h2>
+                    Car Insurance
+                </h2>
+                <p class="description">
+                    Website with insurance<br>
+                    calculator
+                </p>
+
+            </div>
+            <div class="item">
+                <div class="portfolio_image">
+                    <div class="image_container">
+                        <img src="images/small_poesh.jpg">
+                    </div>
+                    <div class="image_overlay_container"></div>
+                </div>
+                <h2>
+                    Food portal
+                </h2>
+                <p class="description">
+                    My first startup<br>
+                    created in 2008
+                </p>
+
+            </div>
+
+            <div class="view_all">
+                <a href="/works">View works details</a>
+            </div>
+        </div>
+
+        <div class="level_one">
+            Design and programming for me is more than work.<br>
+            It’s also about hobby.
+        </div>
+
+        <div class="level_two">
+            I like to create things that makes me happy:<br>
+            design improvement concepts, prototypes and other
+        </div>
+
+        <div class="portfolio_three">
+            <div class="item">
+                <div class="image_container">
+                    <img src="images/micro_mongo.jpg">
+                </div>
+                <div class="image_overlay_container"></div>
+            </div>
+            <div class="item">
+                <div class="image_container">
+                    <img src="images/micro_mailbox.jpg">
+                </div>
+                <div class="image_overlay_container"></div>
+            </div>
+            <div class="item">
+                <div class="image_container">
+                    <img src="images/micro_tweenk.jpg">
+                </div>
+                <div class="image_overlay_container"></div>
+            </div>
+            <div class="item">
+                <div class="image_container">
+                    <img src="images/micro_convy.jpg">
+                </div>
+                <div class="image_overlay_container"></div>
+            </div>
+            <div class="item">
+                <div class="image_container">
+                    <img src="images/micro_stitch.jpg">
+                </div>
+                <div class="image_overlay_container"></div>
+            </div>
+
+
+        </div>
+
+        <div class="level_one">
+            My social profiles once again:
+        </div>
+
+        {% include "misc/social_buttons.jinja2" %}
+
+    </div>
+
+{% include "footer.jinja2" %}
