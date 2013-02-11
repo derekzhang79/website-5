@@ -399,6 +399,9 @@ body {
     }
   }
 
+  a {
+    border: none;
+  }
 }
 
 /* Top and Bottom Bars */
@@ -409,7 +412,7 @@ body {
   
   .home_link_container {
     float: left;
-    width: 100px;
+    margin-right: 35px;
     color: $link_color;
   }
 
@@ -534,9 +537,41 @@ div.image_std {
     margin-left: -140px;
   }
 
+  &.image_map {
+    margin-left: -140px;
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
 }
 
 div.side_image {
   position: absolute;
   margin-left: 790px;
+}
+
+div.empty_container {
+  height: 315px;
+  width: 100px;
+  
+  &.cars {
+    height: 100px;
+  }
+}
+
+div.work_info {
+  border-left: 10px solid rgba(0, 0, 0, 0.2);
+  width: 720px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 30px -30px 0px;
+  line-height: 21px;
+
+  a {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
 }

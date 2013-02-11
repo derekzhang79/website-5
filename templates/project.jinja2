@@ -41,6 +41,12 @@
 			&uarr; <a href="#top">Top</a>
 		</div>
 
+		{% if project.link %}
+			<div class="home_link_container">
+				<a href="{{ project.link }}">{{ project.link }}</a>
+			</div>
+		{% endif %}
+
 		{% include "misc/social_buttons.jinja2" %}
 
 		<div class="clear"></div>

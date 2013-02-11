@@ -270,13 +270,15 @@ body {
       height: 100px;
       z-index: 11;
       position: absolute; }
+  .portfolio_three a {
+    border: none; }
 
 /* Top and Bottom Bars */
 .top_bar, .bottom_bar {
   padding: 10px; }
   .top_bar .home_link_container, .bottom_bar .home_link_container {
     float: left;
-    width: 100px;
+    margin-right: 35px;
     color: #c85e00; }
   .top_bar .name, .bottom_bar .name {
     float: right;
@@ -374,7 +376,31 @@ div.image_std {
     margin-top: 0; }
   div.image_std.big_center {
     margin-left: -140px; }
+  div.image_std.image_map {
+    margin-left: -140px;
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden; }
 
 div.side_image {
   position: absolute;
   margin-left: 790px; }
+
+div.empty_container {
+  height: 315px;
+  width: 100px; }
+  div.empty_container.cars {
+    height: 100px; }
+
+div.work_info {
+  border-left: 10px solid rgba(0, 0, 0, 0.2);
+  width: 720px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 30px -30px 0px;
+  line-height: 21px; }
+  div.work_info a {
+    font-size: 16px;
+    font-weight: normal; }

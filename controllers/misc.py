@@ -53,6 +53,11 @@ class miscController(basic.defaultController):
 				'link': 'http://megatyumen.ru'
 			})
 
+		elif project['code'] == 'works':
+			project.update({
+				'name': 'Random works'
+			})
+
 		fields.update({'project': project})
 
 		return basic.defaultController._printTemplate(self, 'project', fields)
