@@ -86,6 +86,7 @@
 /* line 62, ../sass/lightbox.sass */
 .lb-nav a {
   outline: none;
+  border: none;
 }
 
 /* line 65, ../sass/lightbox.sass */
@@ -171,6 +172,7 @@
 /* line 112, ../sass/lightbox.sass */
 .lb-data .lb-close {
   width: 35px;
+  display: none;
   float: right;
   padding-bottom: 0.7em;
   outline: none;

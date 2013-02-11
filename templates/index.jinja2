@@ -57,6 +57,28 @@
 
 ] %}
 
+{% set portfolio_three = [
+	{
+		'link':'mongohub.jpg',
+		'img':'micro_mongo.jpg'
+	},
+	{
+		'link':'mailbox.jpg',
+		'img':'micro_mailbox.jpg'
+	},
+	{
+		'link':'tweenk.jpg',
+		'img':'micro_tweenk.jpg'
+	},
+	{
+		'link':'project.jpg',
+		'img':'micro_convy.jpg'
+	},
+	{
+		'link':'stitch.jpg',
+		'img':'micro_stitch.jpg'
+	}
+]%}
 
 {% include "header.jinja2" %}
 
@@ -198,39 +220,16 @@
         </div>
 
         <div class="portfolio_three">
-	        <a href="images/tweeria.jpg" rel="lightbox">
-	            <div class="item">
-	                <div class="image_container">
-	                   <img src="images/micro_mongo.jpg">
-	                </div>
-	                <div class="image_overlay_container"></div>
-	            </div>
-	        </a>
-            <div class="item">
-                <div class="image_container">
-                    <img src="images/micro_mailbox.jpg">
-                </div>
-                <div class="image_overlay_container"></div>
-            </div>
-            <div class="item">
-                <div class="image_container">
-                    <img src="images/micro_tweenk.jpg">
-                </div>
-                <div class="image_overlay_container"></div>
-            </div>
-            <div class="item">
-                <div class="image_container">
-                    <img src="images/micro_convy.jpg">
-                </div>
-                <div class="image_overlay_container"></div>
-            </div>
-            <div class="item">
-                <div class="image_container">
-                    <img src="images/micro_stitch.jpg">
-                </div>
-                <div class="image_overlay_container"></div>
-            </div>
-
+	        {% for project in portfolio_three %}
+		        <a href="images/hobby/{{ project.link }}" rel="lightbox[three]">
+		            <div class="item">
+		                <div class="image_container">
+		                   <img src="images/{{ project.img }}">
+		                </div>
+		                <div class="image_overlay_container"></div>
+		            </div>
+		        </a>
+	        {% endfor %}
 
         </div>
 
