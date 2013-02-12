@@ -352,7 +352,8 @@ body {
 p.text {
   width: 700px;
   line-height: 22px;
-  z-index: 20; }
+  z-index: 20;
+  position: relative; }
 
 div.image_std {
   margin: -19px -2px -14px -23px;
@@ -386,6 +387,14 @@ div.image_std {
 div.side_image {
   position: absolute;
   margin-left: 790px; }
+
+div.side_info {
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 24px;
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 10px 15px;
+  font-size: 14px; }
 
 div.empty_container {
   height: 315px;

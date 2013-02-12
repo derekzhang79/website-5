@@ -1,24 +1,20 @@
 
 <div class="header">
-	Tweeria is a game with minimal user's involvement.<br>
-	Everytime you tweet, your alter ego finds adventures, kills monsters or gets items.
+	Our government customer wanted a system that would allow its employees control<br>
+	and manage government property quickly and easily.
 </div>
 
-<p class="text">
-	Сейчас Департамент использует для ведения своих процессов и работы с государственной собственностью бесконечное
-	множество несвязанных Excel документов. Наша система должна автоматизировать работу по ведению огромного
-	количества реестров и процессов.
-</p>
 
 <p class="text">
-	В процессе работы прототипы и макеты изменялись последовательно и вдумчиво, так что каждое мое решение относительно
-	интерфейса принято с учетом требований и специфики проекта.
+	Department’s employees used a lot of unlinked and different Excel files
+	to manage government property before the new system release. This system automated
+	their work to operate and maintain a huge number of documents, registers and processes.
 </p>
 
-<p class="text">
-	Каждый пользователь при входе в систему попадает на страницу своего отдела (всего 15 отделов) со списком доступных
-	ему действий, сохраненными запросами поиска и уведомлениями.
-</p>
+<div class="side_info" style="margin-top: 5px">
+	— Business analysis<br>
+	— UI/UX design<br>
+</div>
 
 <div class="image_std">
 	<img src="images/2_kgs/1_dashboard.png">
@@ -26,69 +22,64 @@
 </div>
 
 <p class="text">
-	В общем случае реестр объектов или журнал процессов представляет собой таблицу. Есть две большие сложности с данными
-	таблицами: большой вертикальный размер (десятки тысяч объектов и пользователи хотят видеть все) и большой
-	горизонтальный размер (большое количество столбцов, которое часто не помещается в 1024px по ширине).
-	Поэтому информация представлена наиболее плотно.
+	After login each user gets his department's dashboard page (there are 15 departments at all)
+	with a list of available actions, saved queries and notifications.
 </p>
 
 <div class="image_std">
 	<img src="images/2_kgs/2_table.png">
-	<span>Standard personal dashboard</span>
+	<span>Table of useful data</span>
 </div>
 
 <p class="text">
-	Есть также набор нестандартных таблиц, по которым пользователи ставят отдельные требования. Например, таблица
-	с периодами и отображением относительного изменения данных.
+	In the general case any register or list of processes is just a table.
+	There are two big problems with these tables: a large vertical size (tens of thousands of objects)
+	and a large horizontal size (large number of columns, which often does not fit in 1024px wide).
+	Therefore, information was placed in these tables very densely.
 </p>
 <div class="image_std">
 	<img src="images/2_kgs/3_bigtable.png">
-	<span>Standard personal dashboard</span>
+	<span>Table with periodic filters and relative changes</span>
 </div>
 
 <p class="text">
-	Страница редактирования объекта или процесса в общем случае представляет собой карточку с набором полей минимально
-	возможного количества типов. В правой части страницы закреплен блок, осуществляющий навигацию по разделам карточки,
-	который иногда требуется сворачивать.
+	Also there is a set of custom tables, which need to meet specific users' requirements.
+	For example, a periodic table with relative data changes.
 </p>
 <div class="image_std">
 	<img src="images/2_kgs/4_element.png">
-	<span>Standard personal dashboard</span>
+	<span>Record edit page</span>
 </div>
 
 <p class="text">
-	Помимо стандартных полей, потребовалось введение и проектирование полей собственных типов. Например, поля-ссылки
-	на объекты и поля-ссылки на документы.
-	5_link_object
+	Generally, edit page of the object or process is a card with a set of fields with minimum possible number
+	of field types. In the right part of the page is fixed block with navigation to quickly select every
+	part of record card. This block can be turned off If it is necessary.
 </p>
 
-<p class="text">
-	Также, для “продвинутых” пользователей мы стараемся сделать небольшие “фишечки”, которые будут помогать им работать
-	чуть более эффективно. Например, быстрый просмотр объектов или удобный выбор даты.
-	6_preview
-	7_date_picker
-</p>
 
 <div class="side_image">
 	<img src="images/2_kgs/mini_1.png">
 </div>
 
-<p class="text">
-	Система представляет собой веб-сервис, но, чтобы упростить работу с ней, было решено использовать XUL
-	Runner от Mozilla с переработанным интерфейсом. Таким образом мы убрали из браузера все лишнее (например,
-	правый клик там, где не нужно и т.д.)
-</p>
 <div class="image_std">
 	<img src="images/2_kgs/5_xul.png">
-	<span>Standard personal dashboard</span>
+	<span>XUL-based desktop client</span>
 </div>
 
 <p class="text">
-	Кроме того, была проделана большая работа в части проектирования системы и интерфейсов для
-	задач: уведомления, журналы событий, календарь встреч, поиск, история изменений, версии документов и т.д.
+	The system is a web service, but we decided to write standalone client to make work
+	with it more easier. We used Mozilla XUL Runner with my redesigned interface.
+	So we threw away out all unnecessary things in browser and added a lot of cool features.
 </p>
 
 <p class="text">
-	В процессе работы была спроектирована и прототипирована каждая страница для каждого отдела
-	(более 240 стр) со своими наборами полей и действий.
+	In addition, we developed a lot of other useful stuff: notifications, event logs,
+	calendar, search, history, file versions and etc.
+</p>
+
+<p class="text">
+	During this process of system developing I was responsible for user interface design
+	and user experience. In total I designed and prototyped each of page for each department
+	with own fields and actions and with dozens of unique working processes.
 </p>
