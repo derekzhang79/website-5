@@ -34,3 +34,4 @@ PID
 *.log
 logs/*.*
 /logs/
+logs/web.log
