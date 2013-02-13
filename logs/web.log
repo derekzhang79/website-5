@@ -597,3 +597,10 @@ Request Headers:
 [11/Feb/2013:13:23:27] ENGINE Started monitor thread '_TimeoutMonitor'.
 [11/Feb/2013:13:23:27] ENGINE Serving on 127.0.0.1:8082
 [11/Feb/2013:13:23:27] ENGINE Bus STARTED
+[13/Feb/2013:20:40:22] ENGINE Listening for SIGHUP.
+[13/Feb/2013:20:40:22] ENGINE Listening for SIGTERM.
+[13/Feb/2013:20:40:22] ENGINE Listening for SIGUSR1.
+[13/Feb/2013:20:40:22] ENGINE Bus STARTING
+[13/Feb/2013:20:40:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[13/Feb/2013:20:40:22] ENGINE Serving on 127.0.0.1:8082
+[13/Feb/2013:20:40:22] ENGINE Bus STARTED
