@@ -60,7 +60,7 @@ class CoreConfigParser():
 
 class core():
 
-	__version__ = u"0.1"
+	__version__ = u"1.0"
 
 	APP_DIR = os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0])+'/../'
 
