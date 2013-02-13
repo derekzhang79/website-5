@@ -30,3 +30,7 @@ pip-log.txt
 .DS_Store
 .sass-cache
 PID
+
+*.log
+logs/*.*
+/logs/
