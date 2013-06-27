@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>{{ __base__.app_name }}: {{ error_name }}</title>
+	</head>
+
+	<body class="framework-error">
+		<div class="header">
+            {{ __base__.app_name }}
+			<div class="framework">
+				{{ __base__.framework }}
+			</div>
+		</div>
+		<div class="container">
+
+			<div class="inside-container">
+				<h1>Error: {{ error_name }}</h1>
+				<pre>{{ context }}</pre>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

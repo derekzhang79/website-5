@@ -1,19 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import __init__
-import datetime
-import cherrypy
 import __main__
+import cherrypy
 
-from jinja2 import Environment, ModuleLoader, Template, FunctionLoader, FileSystemLoader, ChoiceLoader
+from jinja2 import Environment, FileSystemLoader, exceptions
 
 class builder():
-
-	cur_time = datetime.datetime.now()
-
-	loads = 0
-
-	COMPILED = __main__.core.APP_DIR+'templates/compiled/templates.py'
 
 	env = Environment(
 		auto_reload=True,
@@ -21,12 +14,10 @@ class builder():
 	)
 
 	def __init__(self, core = None):
-
-		if not core:
-			core = __main__.core
-
-		self.core_settings = core
-		self.base_fields = self.core_settings.base_fields
+		try:
+			self.core
+		except:
+			self.core = __main__.core
 
 	def throwWebError(self, error_code = 404, params = {}):
 
@@ -38,37 +29,52 @@ class builder():
 
 		return self.loadTemplate('error.jinja2', fields)
 
-	def redirect(self, url, text = "Redirecting ... "):
-		fields = {'redirect_url':url,'redirect_text':text}
-		return self.loadTemplate('redirect.jinja2',fields)
+	def throwFrameworkError(self, name, context = {}):
+		data = {
+			'fields': {
+				'error_name': name,
+			    'context': context
+			}
+		}
+
+		if not self.core.conf['debug']['framework_errors']:
+			raise Exception
+
+		return self.loadTemplate(self.core.SERVICE_TEMPLATES['framework_error']+'.jinja2', data)
 
 	def httpRedirect(self, url):
 		raise cherrypy.HTTPRedirect(url)
 
-	def prettifyTmpPath(self, tmp_path):
-		return tmp_path.replace('./','')
+	def loadTemplate(self, filename = '', data = {'fields': {} }):
 
-	def loadTemplate(self, filename = '', fields = {}, incoming_text = False, useJ = False):
-
-		if not 'current_page' in fields:
-			fields.update({
-				'current_page': filename,
-				'version': self.core_settings.__version__,
-				'address': cherrypy.request.path_info[1:],
-				'build': self.core_settings.__build__,
-				'conf_name': self.core_settings.loaded_data['conf_name']
+		if not 'current_page' in data['fields']:
+			data['fields'].update({
+				'__base__': {
+					'current_page': filename,
+				    'app_name': self.core.__appname__,
+				    'framework': self.core.__framework__['name']+', version: '+self.core.__framework__['version'],
+					'version': self.core.__version__,
+					'address': cherrypy.request.path_info[1:],
+					'revision': self.core.__revision__,
+					'conf_name': self.core.conf['conf_name']
+				}
 			})
 
-		if not 'login' in fields:
-			fields.update({'login':False})
+		data['fields']['__base__'].update(self.core.base_fields)
 
-		fields.update(self.base_fields)
+		try:
+			template = self.env.get_template(filename)
+		except exceptions.TemplateNotFound, e:
+			return self.throwFrameworkError('template not found', {'template name': str(e)})
 
-		template = self.env.get_template(filename)
-		fields.update({"fields": fields})
-		text = template.render(fields)
+		text = template.render(data['fields'])
+
+		if self.core.conf['debug']['web_debug']:
+			template = self.env.get_template(self.core.SERVICE_TEMPLATES['debug']+'.jinja2')
+			text += template.render(data)
+
+		if self.core.conf['debug']['model_debug']:
+			template = self.env.get_template(self.core.SERVICE_TEMPLATES['debug_model']+'.jinja2')
+			text += template.render({'__debug_model': self.core.model})
 
 		return text
-
-if __name__ == '__main__':
-	builder = builder()
