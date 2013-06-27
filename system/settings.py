@@ -33,6 +33,11 @@ class CoreConfigParser():
 			'scope': 'sass',
 		    'params_bool': ['enabled'],
 		    'params_str': ['src_dir', 'output_dir']
+		},
+		{
+			'scope': 'gallery',
+			'params_bool': ['enabled'],
+			'params_str': ['original_dir', 'thumbnails_dir', 'collection']
 		}
 	]
 
@@ -110,8 +115,8 @@ class CoreConfigParser():
 
 class core():
 
-	__appname__  = u'Auchenflower Framework'
-	__version__  = u'0.9'
+	__appname__  = u'Alex Shteinikov\'s website'
+	__version__  = u'0.5'
 	__revision__ = False
 
 	__framework__ = {
@@ -165,7 +170,6 @@ class core():
 		is_debug = is_debug or self.conf['global']['request.show_tracebacks']
 
 		self.DEBUG_MODE = is_debug
-
 
 	def __databaseLoad(self, connector_name):
 
