@@ -13,11 +13,23 @@
   font-style: normal;
   font-weight: bold; }
 
+.link-to-big-gallery {
+  margin: 40px 0 0 50px; }
+  .link-to-big-gallery > a {
+    font-size: 24px;
+    display: inline-block;
+    padding-bottom: 0px;
+    margin-bottom: 7px; }
+  .link-to-big-gallery div {
+    font-size: 12px;
+    color: #666; }
+
 .gallery-container {
-  padding: 40px; }
+  padding: 40px;
+  min-height: 100%; }
   .gallery-container .gallery-item {
     float: left;
-    margin: 10px; }
+    margin: 0 10px 20px 10px; }
 
 .new-gallery-container {
   background-color: black; }

@@ -1,10 +1,28 @@
 
+.link-to-big-gallery {
+  margin: 40px 0 0 50px;
+
+  & > a {
+    font-size: 24px;
+    display: inline-block;
+    padding-bottom: 0px;
+    margin-bottom: 7px;
+  }
+
+  div {
+    font-size: 12px;
+    color: #666;
+  }
+
+}
+
 .gallery-container {
   padding: 40px;
+  min-height: 100%;
 
   .gallery-item {
     float: left;
-    margin: 10px;
+    margin: 0 10px 20px 10px;
   }
 
 }

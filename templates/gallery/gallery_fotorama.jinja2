@@ -9,10 +9,10 @@
 
 <div class="new-gallery-container">
 
-	<div class="fotorama" data-width="100%" data-height="100%" data-keyboard="true" data-nav="thumbs">
+	<div class="fotorama" data-hash="true" data-width="100%" data-height="100%" data-keyboard="true" data-nav="thumbs">
 	    {% for image in images %}
 		    <a href="/gallery/new_original/{{ image.new_original }}">
-			    <img src="/gallery/thumbnails/{{ image.thumbnail }}">
+			    <img src="/gallery/thumbnails64/{{ image.thumbnail }}">
 		    </a>
 	    {% endfor %}
 	</div>

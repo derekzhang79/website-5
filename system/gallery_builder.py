@@ -7,6 +7,7 @@ import os
 class galleryBuilder():
 
 	THUMB_DIR = False
+	THUMB64_DIR = False
 	ORIGINAL_DIR = False
 	NEW_ORIGINAL_DIR = False
 
@@ -14,14 +15,16 @@ class galleryBuilder():
 		self.core = settings
 
 		self.THUMB_DIR = settings.APP_DIR + settings.conf['gallery']['thumbnails_dir']
+		self.THUMB64_DIR = settings.APP_DIR + settings.conf['gallery']['thumbnails64_dir']
 		self.ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['original_dir']
 		self.NEW_ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['new_original_dir']
 
 	def resizeImage(self, file_path, th_width = 200, th_height = 200, or_width = 800, or_height = 600):
 		image = Image.open(file_path)
 
-		# Crop and make thumbnail
+		# Crop and make thumbnails
 		thumb = ImageOps.fit(image, (th_width, th_height), Image.ANTIALIAS)
+		thumb64 = ImageOps.fit(image, (64, 64), Image.ANTIALIAS)
 
 		# Resize original
 		image.thumbnail((or_width, or_height), Image.ANTIALIAS)
@@ -31,6 +34,8 @@ class galleryBuilder():
 		new_filename = old_filename.rsplit('.', 1)[0] + "_new.jpg"
 
 		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG")
+		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG")
+
 		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG")
 
 		return {

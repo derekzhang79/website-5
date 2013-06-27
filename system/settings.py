@@ -39,7 +39,7 @@ class CoreConfigParser():
 		{
 			'scope': 'gallery',
 			'params_bool': ['enabled'],
-			'params_str': ['original_dir', 'thumbnails_dir', 'new_original_dir', 'collection']
+			'params_str': ['original_dir', 'thumbnails_dir', 'new_original_dir', 'thumbnails64_dir', 'collection']
 		}
 	]
 
@@ -224,6 +224,7 @@ class core():
 				'original': record['original'],
 			    'new_original': record['new_original'],
 			    'thumbnail': record['thumbnail'],
+
 			    'time': time()
 			}
 
