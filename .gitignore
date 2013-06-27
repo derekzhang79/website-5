@@ -35,3 +35,5 @@ PID
 logs/*.*
 /logs/
 logs/web.log
+/gallery/original/*
+/gallery/thumbnails/

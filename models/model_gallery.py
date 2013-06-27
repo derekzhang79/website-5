@@ -1,17 +1,16 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import basic_model
 
-class People(basic_model.defaultModel):
+class Images(basic_model.defaultModel):
 
-	test = 'test'
+	def __init__(self, core):
+		basic_model.defaultModel.__init__(self, core)
+		self.collection = core.conf['gallery']['collection']
+		self.gallery_images = self.__preloadImages()
 
-	def getPeople(self):
-		return '1000 people'
+	def __preloadImages(self):
+		return self.db.get(self.collection, {}, sort={'time': 1})
 
-
-class Items(basic_model.defaultModel):
-
-	def getItems(self):
-		return self.db.get('items')
+	def getImages(self):
+		return self.gallery_images

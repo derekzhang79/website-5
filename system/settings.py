@@ -7,6 +7,8 @@ import __main__
 import sys, os, inspect
 import ConfigParser
 import sass_builder
+import gallery_builder
+from time import time
 from models_loader import DataModel
 
 class CoreConfigParser():
@@ -160,6 +162,9 @@ class core():
 		if 'sass' in self.conf and self.conf['sass']['enabled']:
 			self.__sassParse()
 
+		if 'gallery' in self.conf and self.conf['gallery']['enabled']:
+			self.__galleryBuilder()
+
 		self.__modelLoad()
 
 		# check debug mode
@@ -201,3 +206,25 @@ class core():
 	def __sassParse(self):
 		self.css_preprocessor = sass_builder.sassParser(self)
 		self.css_preprocessor.parseSass()
+
+	def __galleryBuilder(self):
+		gb = gallery_builder.galleryBuilder(self)
+		result = gb.resizeAllImages()
+
+		if not self.db:
+			return False
+
+		collection = self.conf['gallery']['collection']
+
+		# Clean up gallery collection if not exists
+		self.db.cleanUp(collection)
+
+		for record in result:
+			record = {
+				'original': record['original'],
+			    'thumbnail': record['thumbnail'],
+			    'time': time()
+			}
+
+			self.db.insert(collection, record)
+
