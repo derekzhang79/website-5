@@ -36,4 +36,5 @@ logs/*.*
 /logs/
 logs/web.log
 /gallery/original/*
-/gallery/thumbnails/
+/gallery/thumbnails/*
+/gallery/new_original/*
