@@ -1,0 +1,30 @@
+{% include "header.jinja2" %}
+
+<style type="text/css">
+	body { border-bottom: none; }
+</style>
+
+<div class="top_bar">
+
+	<a name="top"></a>
+
+	<div class="home_link_container">
+		&larr; <a href="/">Home</a>
+	</div>
+
+    {% set social_class = 'small_social_buttons_container' %}
+    {% include "misc/social_buttons.jinja2" %}
+
+	<div class="name">
+		Alex Shteinikov
+	</div>
+
+</div>
+
+<div class="big-error-container">
+	<h1>Oops! Error {{ code }}</h1>
+	<h3>{{ error }}</h3>
+	&larr; <a href="/">Home</a>
+</div>
+
+{% include "footer.jinja2" %}

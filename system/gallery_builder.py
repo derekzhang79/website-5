@@ -58,7 +58,7 @@ class galleryBuilder():
 
 		return files
 
-	def resizeAllImages(self):
+	def resizeAllImages(self, existing_images = set()):
 		print '> START IMAGE RESIZING...'
 		print 'Open ' + self.ORIGINAL_DIR + ' directory'
 
@@ -70,10 +70,15 @@ class galleryBuilder():
 
 		count = 1
 		for filename in files:
-			fileinfo = self.resizeImage(filename)
-			result.append(fileinfo)
+			message = str(count) + '/' + str(total)
+			if not filename.rsplit('/', 1)[1] in existing_images:
+				fileinfo = self.resizeImage(filename)
+				result.append(fileinfo)
 
-			print str(count) + '/' + str(total)
+			else:
+				message += ' skipped'
+
+			print message
 			count += 1
 
 		print 'Done!...'

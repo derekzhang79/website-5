@@ -435,3 +435,9 @@ div.work_info {
   div.work_info a {
     font-size: 16px;
     font-weight: normal; }
+
+.big-error-container {
+  text-align: center;
+  margin-top: 200px; }
+  .big-error-container h1 {
+    font-size: 36px; }

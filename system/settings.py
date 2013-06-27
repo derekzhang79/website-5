@@ -38,7 +38,7 @@ class CoreConfigParser():
 		},
 		{
 			'scope': 'gallery',
-			'params_bool': ['enabled'],
+			'params_bool': ['enabled', 'force'],
 			'params_str': ['original_dir', 'thumbnails_dir', 'new_original_dir', 'thumbnails64_dir', 'collection']
 		}
 	]
@@ -208,25 +208,31 @@ class core():
 		self.css_preprocessor.parseSass()
 
 	def __galleryBuilder(self):
-		gb = gallery_builder.galleryBuilder(self)
-		result = gb.resizeAllImages()
 
 		if not self.db:
 			return False
 
 		collection = self.conf['gallery']['collection']
 
-		# Clean up gallery collection if not exists
-		self.db.cleanUp(collection)
+		existing_images = set()
+		if not self.conf['gallery']['force']:
+			self.db.createCollection(collection)
+			_buff = self.db.get(collection, {})
+
+			for item in _buff:
+				existing_images.add(item['original'])
+		else:
+			self.db.cleanUp(collection)
+
+		gb = gallery_builder.galleryBuilder(self)
+		result = gb.resizeAllImages(existing_images)
 
 		for record in result:
 			record = {
 				'original': record['original'],
-			    'new_original': record['new_original'],
-			    'thumbnail': record['thumbnail'],
-
-			    'time': time()
+				'new_original': record['new_original'],
+				'thumbnail': record['thumbnail'],
+				'time': time()
 			}
 
 			self.db.insert(collection, record)
-
