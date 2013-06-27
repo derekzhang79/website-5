@@ -8,28 +8,35 @@ class galleryBuilder():
 
 	THUMB_DIR = False
 	ORIGINAL_DIR = False
+	NEW_ORIGINAL_DIR = False
 
 	def __init__(self, settings):
 		self.core = settings
 
 		self.THUMB_DIR = settings.APP_DIR + settings.conf['gallery']['thumbnails_dir']
 		self.ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['original_dir']
+		self.NEW_ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['new_original_dir']
 
 	def resizeImage(self, file_path, th_width = 200, th_height = 200, or_width = 800, or_height = 600):
 		image = Image.open(file_path)
-		thumb = ImageOps.crop(image, (th_width, th_height), Image.ANTIALIAS)
-		image.thumbnail((th_width, th_height), Image.ANTIALIAS)
+
+		# Crop and make thumbnail
+		thumb = ImageOps.fit(image, (th_width, th_height), Image.ANTIALIAS)
+
+		# Resize original
+		image.thumbnail((or_width, or_height), Image.ANTIALIAS)
 
 		old_filename = file_path.rsplit('/', 1)[1]
 		thumb_filename = old_filename.rsplit('.', 1)[0] + "_thumb.jpg"
-		new_filename = old_filename.rsplit('.', 1)[0] + "_thumb.jpg"
+		new_filename = old_filename.rsplit('.', 1)[0] + "_new.jpg"
 
-		thumb.save(self.THUMB_DIR + new_filename, "JPEG")
-		thumb.save(self.ORIGINAL_DIR + filename, "JPEG")
+		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG")
+		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG")
 
 		return {
-			'original': filename,
-		    'thumbnail': new_filename
+			'original': old_filename,
+		    'new_original': new_filename,
+		    'thumbnail': thumb_filename
 		}
 
 	def getFiles(self, directory):

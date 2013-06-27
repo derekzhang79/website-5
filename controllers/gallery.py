@@ -8,7 +8,9 @@ class galleryController(basic_controller.defaultController):
 
 	pages = {
 	'type': ['photos'],
-		'urls': {}
+		'urls': {
+			'big': 'printFotorama'
+		}
 	}
 
 	def printDefault(self, data):
@@ -16,3 +18,9 @@ class galleryController(basic_controller.defaultController):
 		data['fields'].update({'images': images})
 
 		return self.printTemplate('gallery', data)
+
+	def printFotorama(self, data):
+		images = self.core.model['gallery']['Images'].getImages()
+		data['fields'].update({'images': images})
+
+		return self.printTemplate('gallery_fotorama', data)

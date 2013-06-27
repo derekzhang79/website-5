@@ -1,0 +1,22 @@
+{% include "header.jinja2" %}
+
+<link href="/libs/fotorama/fotorama.css" rel="stylesheet">
+<script type="text/javascript" src="/libs/fotorama/fotorama.js"></script>
+
+<style type="text/css">
+	body { border: none; }
+</style>
+
+<div class="new-gallery-container">
+
+	<div class="fotorama" data-width="100%" data-height="100%" data-keyboard="true" data-nav="thumbs">
+	    {% for image in images %}
+		    <a href="/gallery/new_original/{{ image.new_original }}">
+			    <img src="/gallery/thumbnails/{{ image.thumbnail }}">
+		    </a>
+	    {% endfor %}
+	</div>
+
+</div>
+
+{% include "footer.jinja2" %}

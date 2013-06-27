@@ -1,3 +1,12 @@
+/* Main vars */
+
+$sprite: url("/css/style_images/sprite.png");
+$quote_color: rgba(96, 96, 96, 0.1);
+$main_border: 15px solid black;
+
+$text_color: #7e7e7e;
+$link_color: #c85e00;
+$link_inactive_color: #ead3be;
 
 /* Fonts */
 
@@ -11,14 +20,14 @@
   url('#{$filename}.svg##{$svgname}') format('svg');
 }
 
-/* PT Serif */
+/* PT Sans */
 
 @font-face {
-  @include fontload('PT Serif', 'PT Serif', 'fonts/ptf55f_w', 'PTSerif-Regular');
+  @include fontload('PT Sans', 'PT Sans', '/css/fonts/PTS55F_W', 'PTSans-Regular');
 }
 
 @font-face {
-  @include fontload('PT Serif', 'PT Serif Bold', 'fonts/ptf75f_w', 'PTSerif-Bold');
+  @include fontload('PT Sans', 'PT Sans Bold', '/css/fonts/PTS75F_W', 'PTSans-Bold');
   font-style: normal;
   font-weight: bold;
 }

@@ -1,34 +1,5 @@
-/* Main vars */
-
-$sprite: url("/css/style_images/sprite.png");
-$quote_color: rgba(96, 96, 96, 0.1);
-$main_border: 15px solid black;
-
-$text_color: #7e7e7e;
-$link_color: #c85e00;
-$link_inactive_color: #ead3be;
-
-/*  -------  */
-
-@font-face {
-  font-family: 'PT Sans';
-  src: url('fonts/PTS55F_W.eot');
-  src: local('PT Sans'),
-  url('/css/fonts/PTS55F_W.woff') format('woff'),
-  url('/css/fonts/PTS55F_W.ttf') format('truetype'),
-  url('/css/fonts/PTS55F_W.svg#PTSans-Regular') format('svg');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  src: url('fonts/ts75f_w.eot');
-  font-style: normal;
-  font-weight: bold;
-  src: local('PT Sans Bold'),
-  url('/css/fonts/PTS75F_W.woff') format('woff'),
-  url('/css/fonts/PTS75F_W.ttf') format('truetype'),
-  url('/css/fonts/PTS75F_W.svg#PTSans-Bold') format('svg');
-}
+@import "preload";
+@import "gallery";
 
 body {
   color: black;

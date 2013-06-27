@@ -1,16 +1,26 @@
 /* Main vars */
-/*  -------  */
+/* Fonts */
+/* PT Sans */
 @font-face {
   font-family: 'PT Sans';
-  src: url('fonts/PTS55F_W.eot');
-  src: local('PT Sans'), url('/css/fonts/PTS55F_W.woff') format('woff'), url('/css/fonts/PTS55F_W.ttf') format('truetype'), url('/css/fonts/PTS55F_W.svg#PTSans-Regular') format('svg'); }
+  src: url('/css/fonts/PTS55F_W.eot');
+  src: local('PT Sans'), url('/css/fonts/PTS55F_W.eot?#iefix') format('embedded-opentype'), url('/css/fonts/PTS55F_W.woff') format('woff'), url('/css/fonts/PTS55F_W.ttf') format('truetype'), url('/css/fonts/PTS55F_W.svg#PTSans-Regular') format('svg'); }
 
 @font-face {
   font-family: 'PT Sans';
-  src: url('fonts/ts75f_w.eot');
+  src: url('/css/fonts/PTS75F_W.eot');
+  src: local('PT Sans Bold'), url('/css/fonts/PTS75F_W.eot?#iefix') format('embedded-opentype'), url('/css/fonts/PTS75F_W.woff') format('woff'), url('/css/fonts/PTS75F_W.ttf') format('truetype'), url('/css/fonts/PTS75F_W.svg#PTSans-Bold') format('svg');
   font-style: normal;
-  font-weight: bold;
-  src: local('PT Sans Bold'), url('/css/fonts/PTS75F_W.woff') format('woff'), url('/css/fonts/PTS75F_W.ttf') format('truetype'), url('/css/fonts/PTS75F_W.svg#PTSans-Bold') format('svg'); }
+  font-weight: bold; }
+
+.gallery-container {
+  padding: 40px; }
+  .gallery-container .gallery-item {
+    float: left;
+    margin: 10px; }
+
+.new-gallery-container {
+  background-color: black; }
 
 body {
   color: black;
