@@ -30,13 +30,13 @@ class galleryBuilder():
 		image.thumbnail((or_width, or_height), Image.ANTIALIAS)
 
 		old_filename = file_path.rsplit('/', 1)[1]
-		thumb_filename = old_filename.rsplit('.', 1)[0] + "_thumb.jpg"
-		new_filename = old_filename.rsplit('.', 1)[0] + "_new.jpg"
+		thumb_filename = old_filename.rsplit('.', 1)[0] + "_thumb.png"
+		new_filename = old_filename.rsplit('.', 1)[0] + "_new.png"
 
-		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG")
-		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG")
+		thumb.save(self.THUMB_DIR + thumb_filename, "PNG")
+		thumb64.save(self.THUMB64_DIR + thumb_filename, "PNG")
 
-		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG")
+		image.save(self.NEW_ORIGINAL_DIR + new_filename, "PNG")
 
 		return {
 			'original': old_filename,
