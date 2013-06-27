@@ -33,6 +33,9 @@ class galleryBuilder():
 		thumb_filename = old_filename.rsplit('.', 1)[0] + "_thumb.png"
 		new_filename = old_filename.rsplit('.', 1)[0] + "_new.png"
 
+		thumb_filename = thumb_filename.replace(" ", "_")
+		new_filename = thumb_filename.replace(" ", "_")
+
 		thumb.save(self.THUMB_DIR + thumb_filename, "PNG")
 		thumb64.save(self.THUMB64_DIR + thumb_filename, "PNG")
 
