@@ -1,1 +1,15 @@
-aass
+{% include "header.jinja2" %}
+
+<div style="padding: 40px">
+	{% for image in images %}
+		<div style="float: left; margin: 10px">
+			<a href="/gallery/original/{{ image.original }}" rel="lightbox[three]">
+				<img src="/gallery/thumbnails/{{ image.thumbnail }}">
+			</a>
+		</div>
+	{% endfor %}
+
+	<div class="clear"></div>
+</div>
+
+{% include "footer.jinja2" %}

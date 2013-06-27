@@ -15,14 +15,17 @@ class galleryBuilder():
 		self.THUMB_DIR = settings.APP_DIR + settings.conf['gallery']['thumbnails_dir']
 		self.ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['original_dir']
 
-	def resizeImage(self, file_path, th_width = 200, th_height = 200):
+	def resizeImage(self, file_path, th_width = 200, th_height = 200, or_width = 800, or_height = 600):
 		image = Image.open(file_path)
-		thumb = ImageOps.fit(image, (th_width, th_height), Image.ANTIALIAS)
+		thumb = ImageOps.crop(image, (th_width, th_height), Image.ANTIALIAS)
+		image.thumbnail((th_width, th_height), Image.ANTIALIAS)
 
-		filename = file_path.rsplit('/', 1)[1]
-		new_filename = filename.rsplit('.', 1)[0] + "_thumb.png"
+		old_filename = file_path.rsplit('/', 1)[1]
+		thumb_filename = old_filename.rsplit('.', 1)[0] + "_thumb.jpg"
+		new_filename = old_filename.rsplit('.', 1)[0] + "_thumb.jpg"
 
-		thumb.save(self.THUMB_DIR + new_filename, "PNG")
+		thumb.save(self.THUMB_DIR + new_filename, "JPEG")
+		thumb.save(self.ORIGINAL_DIR + filename, "JPEG")
 
 		return {
 			'original': filename,
