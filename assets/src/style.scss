@@ -1,5 +1,6 @@
 @import "preload";
 @import "gallery";
+@import "sprites";
 
 body {
   color: black;
@@ -101,56 +102,16 @@ body {
   Social buttons
 */
 
-@mixin bp($x, $y, $z:-164px) {
-  background-position: $x $y;
-  border: none;
-
-  &:hover {
-    background-position: $x + $z $y;
-  }
-
-}
-
 .social_buttons_container {
-
-  width: 265px;
+  width: 400px;
+  text-align: center;
   margin: 30px auto 0;
 
   a {
-    background: $sprite;
     display: inline-block;
-    width: 26px;
-    height: 26px;
     margin-right: 18px;
+    border-bottom: none;
   }
-
-  .mail {
-    @include bp(0, 0);
-  }
-
-  .skype {
-    @include bp(-27px, 0);
-  }
-
-  .linkedin {
-    @include bp(-54px, 0);
-  }
-
-  .dribbble {
-    @include bp(-81px, 0);
-  }
-
-  .twitter {
-    @include bp(-108px, 0);
-    margin-right: 14px;
-  }
-
-  .facebook {
-    @include bp(-135px, 0);
-    margin-right: 0;
-  }
-
-
 }
 
 /*
@@ -256,16 +217,13 @@ body {
       line-height: 20px;
 
       a.geo {
-        background: $sprite;
-        background-position: -112px -33px;
-        height: 15px;
-        width: 10px;
         margin-left: 1px;
         border: none;
         display: inline-block;
+        vertical-align: middle;
 
-        &:hover {
-          background-position: -126px -33px;
+        &:hover i {
+          background-position: -20px -9px;
         }
 
       }
@@ -401,42 +359,10 @@ body {
     margin: 4px 4px 0 0;
 
     a {
-      background: $sprite;
-      width: 19px;
       border: none;
-      height: 19px;
       display: inline-block;
       margin-right: 15px;
     }
-
-    $bp_shift: -123px;
-
-    .mail {
-      @include bp(-113px, -58px, $bp_shift);
-    }
-
-    .skype {
-      @include bp(-132px, -58px, $bp_shift);
-    }
-
-    .linkedin {
-      @include bp(-151px, -58px, $bp_shift);
-    }
-
-    .dribbble {
-      @include bp(-173px, -58px, $bp_shift);
-    }
-
-    .twitter {
-      @include bp(-192px, -58px, $bp_shift);
-      margin-right: 14px;
-    }
-
-    .facebook {
-      @include bp(-214px, -58px, $bp_shift);
-      margin-right: 0;
-    }
-
 
   }
 

@@ -34,6 +34,165 @@
 .new-gallery-container {
   background-color: black; }
 
+[class^="sprite-"], [class*=" sprite-"] {
+  position: relative;
+  display: inline-block;
+  background-image: url("/css/style_images/sprite.png");
+  background-repeat: no-repeat; }
+
+.empty-sprite {
+  background: none; }
+
+.sprite-geo {
+  background-position: -6px -9px;
+  width: 10px;
+  height: 15px; }
+
+.sprite-geo-active {
+  background-position: -20px -9px;
+  width: 10px;
+  height: 15px; }
+
+.sprite-mail {
+  background-position: -113px -3px;
+  width: 21px;
+  height: 22px; }
+
+.sprite-skype {
+  background-position: -138px -1px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-linkedin {
+  background-position: -167px -1px;
+  width: 23px;
+  height: 24px; }
+
+.sprite-dribbble {
+  background-position: -193px -1px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-twitter {
+  background-position: -219px -3px;
+  width: 25px;
+  height: 22px; }
+
+.sprite-facebook {
+  background-position: -252px -1px;
+  width: 15px;
+  height: 25px; }
+
+.sprite-github {
+  background-position: -278px -1px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-mail-active {
+  background-position: -113px -38px;
+  width: 21px;
+  height: 22px; }
+
+.sprite-skype-active {
+  background-position: -138px -36px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-linkedin-active {
+  background-position: -167px -36px;
+  width: 23px;
+  height: 24px; }
+
+.sprite-dribbble-active {
+  background-position: -193px -36px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-twitter-active {
+  background-position: -219px -38px;
+  width: 25px;
+  height: 22px; }
+
+.sprite-facebook-active {
+  background-position: -252px -36px;
+  width: 15px;
+  height: 25px; }
+
+.sprite-github-active {
+  background-position: -278px -36px;
+  width: 25px;
+  height: 25px; }
+
+.sprite-s-mail {
+  background-position: -114px -71px;
+  width: 15px;
+  height: 17px; }
+
+.sprite-s-skype {
+  background-position: -133px -71px;
+  width: 18px;
+  height: 18px; }
+
+.sprite-s-linkedin {
+  background-position: -154px -71px;
+  width: 16px;
+  height: 17px; }
+
+.sprite-s-dribbble {
+  background-position: -174px -71px;
+  width: 18px;
+  height: 18px; }
+
+.sprite-s-twitter {
+  background-position: -194px -73px;
+  width: 18px;
+  height: 15px; }
+
+.sprite-s-facebook {
+  background-position: -217px -71px;
+  width: 11px;
+  height: 18px; }
+
+.sprite-s-github {
+  background-position: -235px -71px;
+  width: 18px;
+  height: 18px; }
+
+.sprite-s-mail-active {
+  background-position: -114px -101px;
+  width: 15px;
+  height: 17px; }
+
+.sprite-s-skype-active {
+  background-position: -133px -101px;
+  width: 18px;
+  height: 18px; }
+
+.sprite-s-linkedin-active {
+  background-position: -154px -101px;
+  width: 16px;
+  height: 17px; }
+
+.sprite-s-dribbble-active {
+  background-position: -174px -101px;
+  width: 18px;
+  height: 18px; }
+
+.sprite-s-twitter-active {
+  background-position: -194px -103px;
+  width: 18px;
+  height: 15px; }
+
+.sprite-s-facebook-active {
+  background-position: -217px -101px;
+  width: 11px;
+  height: 18px; }
+
+.sprite-s-github-active {
+  background-position: -235px -101px;
+  width: 18px;
+  height: 18px; }
+
 body {
   color: black;
   background: url("/css/style_images/texture_bg.jpg") repeat;
@@ -102,46 +261,13 @@ body {
   Social buttons
 */
 .social_buttons_container {
-  width: 265px;
+  width: 400px;
+  text-align: center;
   margin: 30px auto 0; }
   .social_buttons_container a {
-    background: url("/css/style_images/sprite.png");
     display: inline-block;
-    width: 26px;
-    height: 26px;
-    margin-right: 18px; }
-  .social_buttons_container .mail {
-    background-position: 0 0;
-    border: none; }
-    .social_buttons_container .mail:hover {
-      background-position: -164px 0; }
-  .social_buttons_container .skype {
-    background-position: -27px 0;
-    border: none; }
-    .social_buttons_container .skype:hover {
-      background-position: -191px 0; }
-  .social_buttons_container .linkedin {
-    background-position: -54px 0;
-    border: none; }
-    .social_buttons_container .linkedin:hover {
-      background-position: -218px 0; }
-  .social_buttons_container .dribbble {
-    background-position: -81px 0;
-    border: none; }
-    .social_buttons_container .dribbble:hover {
-      background-position: -245px 0; }
-  .social_buttons_container .twitter {
-    background-position: -108px 0;
-    border: none;
-    margin-right: 14px; }
-    .social_buttons_container .twitter:hover {
-      background-position: -272px 0; }
-  .social_buttons_container .facebook {
-    background-position: -135px 0;
-    border: none;
-    margin-right: 0; }
-    .social_buttons_container .facebook:hover {
-      background-position: -299px 0; }
+    margin-right: 18px;
+    border-bottom: none; }
 
 /*
   Misc
@@ -217,15 +343,12 @@ body {
       padding-top: 0;
       line-height: 20px; }
       .portfolio_one .item .description a.geo {
-        background: url("/css/style_images/sprite.png");
-        background-position: -112px -33px;
-        height: 15px;
-        width: 10px;
         margin-left: 1px;
         border: none;
-        display: inline-block; }
-        .portfolio_one .item .description a.geo:hover {
-          background-position: -126px -33px; }
+        display: inline-block;
+        vertical-align: middle; }
+        .portfolio_one .item .description a.geo:hover i {
+          background-position: -20px -9px; }
     .portfolio_one .item a.more {
       font-size: 16px; }
 
@@ -312,44 +435,9 @@ body {
     float: right;
     margin: 4px 4px 0 0; }
     .top_bar .small_social_buttons_container a, .bottom_bar .small_social_buttons_container a {
-      background: url("/css/style_images/sprite.png");
-      width: 19px;
       border: none;
-      height: 19px;
       display: inline-block;
       margin-right: 15px; }
-    .top_bar .small_social_buttons_container .mail, .bottom_bar .small_social_buttons_container .mail {
-      background-position: -113px -58px;
-      border: none; }
-      .top_bar .small_social_buttons_container .mail:hover, .bottom_bar .small_social_buttons_container .mail:hover {
-        background-position: -236px -58px; }
-    .top_bar .small_social_buttons_container .skype, .bottom_bar .small_social_buttons_container .skype {
-      background-position: -132px -58px;
-      border: none; }
-      .top_bar .small_social_buttons_container .skype:hover, .bottom_bar .small_social_buttons_container .skype:hover {
-        background-position: -255px -58px; }
-    .top_bar .small_social_buttons_container .linkedin, .bottom_bar .small_social_buttons_container .linkedin {
-      background-position: -151px -58px;
-      border: none; }
-      .top_bar .small_social_buttons_container .linkedin:hover, .bottom_bar .small_social_buttons_container .linkedin:hover {
-        background-position: -274px -58px; }
-    .top_bar .small_social_buttons_container .dribbble, .bottom_bar .small_social_buttons_container .dribbble {
-      background-position: -173px -58px;
-      border: none; }
-      .top_bar .small_social_buttons_container .dribbble:hover, .bottom_bar .small_social_buttons_container .dribbble:hover {
-        background-position: -296px -58px; }
-    .top_bar .small_social_buttons_container .twitter, .bottom_bar .small_social_buttons_container .twitter {
-      background-position: -192px -58px;
-      border: none;
-      margin-right: 14px; }
-      .top_bar .small_social_buttons_container .twitter:hover, .bottom_bar .small_social_buttons_container .twitter:hover {
-        background-position: -315px -58px; }
-    .top_bar .small_social_buttons_container .facebook, .bottom_bar .small_social_buttons_container .facebook {
-      background-position: -214px -58px;
-      border: none;
-      margin-right: 0; }
-      .top_bar .small_social_buttons_container .facebook:hover, .bottom_bar .small_social_buttons_container .facebook:hover {
-        background-position: -337px -58px; }
 
 .bottom_bar {
   padding-top: 50px; }
