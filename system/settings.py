@@ -118,7 +118,7 @@ class CoreConfigParser():
 class core():
 
 	__appname__  = u'Alex Shteinikov\'s website'
-	__version__  = u'0.5'
+	__version__  = u'1.0'
 	__revision__ = False
 
 	__framework__ = {
