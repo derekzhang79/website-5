@@ -7,8 +7,6 @@ import __main__
 import sys, os, inspect
 import ConfigParser
 import sass_builder
-import gallery_builder
-from time import time
 from models_loader import DataModel
 
 class CoreConfigParser():
@@ -144,7 +142,7 @@ class core():
 	    'debug_model': SERVICE_TEMPLATES_DIR+'debug_model'
 	}
 
-	def __init__(self):
+	def __init__(self, clear_run = False):
 		config_loader = CoreConfigParser()
 		self.conf = config_loader.readData()
 
@@ -159,13 +157,11 @@ class core():
 		if 'database' in self.conf and self.conf['database']['connector']:
 			self.__databaseLoad(self.conf['database']['connector'])
 
-		if 'sass' in self.conf and self.conf['sass']['enabled']:
-			self.__sassParse()
+		if not clear_run:
+			if 'sass' in self.conf and self.conf['sass']['enabled']:
+				self.__sassParse()
 
-		if 'gallery' in self.conf and self.conf['gallery']['enabled']:
-			self.__galleryBuilder()
-
-		self.__modelLoad()
+			self.__modelLoad()
 
 		# check debug mode
 		is_debug = False
@@ -207,32 +203,4 @@ class core():
 		self.css_preprocessor = sass_builder.sassParser(self)
 		self.css_preprocessor.parseSass()
 
-	def __galleryBuilder(self):
 
-		if not self.db:
-			return False
-
-		collection = self.conf['gallery']['collection']
-
-		existing_images = set()
-		if not self.conf['gallery']['force']:
-			self.db.createCollection(collection)
-			_buff = self.db.get(collection, {})
-
-			for item in _buff:
-				existing_images.add(item['original'])
-		else:
-			self.db.cleanUp(collection)
-
-		gb = gallery_builder.galleryBuilder(self)
-		result = gb.resizeAllImages(existing_images)
-
-		for record in result:
-			record = {
-				'original': record['original'],
-				'new_original': record['new_original'],
-				'thumbnail': record['thumbnail'],
-				'time': time()
-			}
-
-			self.db.insert(collection, record)
