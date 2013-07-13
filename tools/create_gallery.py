@@ -42,10 +42,10 @@ class galleryBuilder():
 		thumb_filename = thumb_filename.replace(" ", "_")
 		new_filename = thumb_filename.replace(" ", "_")
 
-		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG")
-		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG")
+		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG", quality=70)
+		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG", quality=70)
 
-		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG")
+		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG", quality=90)
 
 		return {
 			'original': old_filename,
@@ -55,7 +55,7 @@ class galleryBuilder():
 
 	def getFiles(self, directory):
 
-		alist_filter = ['jpg','bmp','png','gif']
+		alist_filter = ['jpg','bmp','png','gif','jpeg']
 		path = os.path.join(directory)
 
 		files = []
