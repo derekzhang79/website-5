@@ -1,6 +1,6 @@
 @import "preload";
 @import "gallery";
-@import "sprites";
+@import "icons";
 
 body {
   color: black;
@@ -109,7 +109,8 @@ body {
 
   a {
     display: inline-block;
-    margin-right: 18px;
+    margin-right: 6px;
+    font-size: 24px;
     border-bottom: none;
   }
 }
@@ -217,15 +218,8 @@ body {
       line-height: 20px;
 
       a.geo {
-        margin-left: 1px;
         border: none;
         display: inline-block;
-        vertical-align: middle;
-
-        &:hover i {
-          background-position: -20px -9px;
-        }
-
       }
 
     }
@@ -361,7 +355,9 @@ body {
     a {
       border: none;
       display: inline-block;
-      margin-right: 15px;
+      margin-right: 6px;
+      font-size: 16px;
+      margin-bottom: 20px;
     }
 
   }
