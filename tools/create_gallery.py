@@ -26,7 +26,7 @@ class galleryBuilder():
 		self.ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['original_dir']
 		self.NEW_ORIGINAL_DIR = settings.APP_DIR + settings.conf['gallery']['new_original_dir']
 
-	def resizeImage(self, file_path, th_width = 200, th_height = 200, or_width = 800, or_height = 600):
+	def resizeImage(self, file_path, th_width = 200, th_height = 200, or_width = 1000, or_height = 800):
 		image = Image.open(file_path)
 
 		# Crop and make thumbnails
@@ -42,10 +42,10 @@ class galleryBuilder():
 		thumb_filename = thumb_filename.replace(" ", "_")
 		new_filename = thumb_filename.replace(" ", "_")
 
-		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG", quality=70)
-		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG", quality=70)
+		thumb.save(self.THUMB_DIR + thumb_filename, "JPEG", quality=100)
+		thumb64.save(self.THUMB64_DIR + thumb_filename, "JPEG", quality=100)
 
-		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG", quality=90)
+		image.save(self.NEW_ORIGINAL_DIR + new_filename, "JPEG", quality=100)
 
 		return {
 			'original': old_filename,

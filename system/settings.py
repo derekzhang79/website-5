@@ -55,6 +55,7 @@ class CoreConfigParser():
 		self.conf_str_name = sys.argv[1]
 
 		self.conf_name = os.path.join(os.path.dirname(__file__)+'/../conf/', sys.argv[1]+'.conf')
+		print self.conf_name
 		self.config = ConfigParser.ConfigParser()
 		self.config.read(self.conf_name)
 
